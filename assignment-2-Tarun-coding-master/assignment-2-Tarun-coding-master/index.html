@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        
+        <div id="header-container">
+            <h1>Assignment 5: Dogs carry the world</h1>
+            <h2>3D Transformation and Viewing | <a
+                    href="https://canvas.ucdavis.edu/courses/595787/assignments/718397">Instructions</a></h2>
+        </div>
+        
+        <div class="settings-container">
+            <div class="modes-container">
+                <h3>Camera Mode</h3>
+                <div class="modes">
+                    <div id="fpsCamMode" class="indicator inactive">FPS</div>
+                    <div id="statCamMode" class="indicator inactive">Stationary</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>modifications</h3><br/>
+                <div class="modes">
+                    <span hidden>Select object/light to modify</span><br/>
+                    <select id="objectOrLight" name="objectOrLight" hidden>
+                        <option value="object Sphere">object sphere</option>
+                        <option value="pointLight One">pointLight One</option>
+                        <option value="pointLight Two">pointLight Two</option>
+                    </select>
+                    <span hidden>Select variable</span><br/>
+                    <select id="selectVariable" name="selectVariable" hidden>
+                        <option value="ka">ka</option>
+                        <option value="kd">kd</option>
+                        <option value="ks">ks</option>
+                        <option value="position">position</option>
+                        <option value="color">color</option>
+                    </select>
+                    <span>Texture Computation</span><br/>
+                    <select  id="textureComputation" name="textureComputation" >
+                        <option value="Bi-Linear">Bi-Linear</option>
+                        <option value="Nearest">Nearest</option>
+                    </select>
+                    <span hidden>set newValue</span><br/>
+                    <input id="value-slider" type="hidden" min="0" max="100" onchange="sliderChanged(this.value, 0.01)" value="0.2">
+                    <span hidden>color</span>
+                    <input type="hidden" id="color-picker"  value="#ff0000" width="0" height="">
+
+
+
+                </div>
+                
+            </div>
+            
+            <div class="modes-container">
+                <h3>Projection Mode</h3>
+                <div class="modes">
+                    <div id="perspProjMode" class="indicator inactive">[P]erspective</div>
+                    <div id="orthoProjMode" class="indicator inactive">[O]rthographic</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <!-- do ids stack? -->
+                <h3>Selection</h3>
+                <div class="modes">
+                    <div id="selectionRaycasting" class="indicator inactive">[R]aycast</div>
+                    <div id="selectionTarget" class="indicator inactive">No Target Selected</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Shading</h3>
+                <div class="modes">
+                    <div id="phong" class="indicator inactive">[1]shading with textures and bump map</div>
+                    <div id="flat" class="indicator inactive">[2] shading with only textures</div>
+                    <div id="gouraud" class="indicator inactive">[3] shading without textures or bump map</div>
+                </div>
+            </div>
+        </div>
+        <div id="webgl-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <img id="moonTexture" src="Stone_Floor_005_basecolor.jpg" width="0" height="0"></img>
+    <img id="moonTextureNormal" src="Stone_Floor_005_normal.jpg" width="0" height="0"></img>
+    <img id="floorTexture" src="checkerBoardGoogle.jpg" width="0" height="0"></img>
+    <img id="floorTextureNormal" src="Rocks_Hexagons_002_normal.jpg" width="0" height="0"></img>
+    <img id="boxTexture" src="Lava_005_COLOR.jpg" width="0" height="0"></img>
+    <img id="dogTexture" src="Ground_Wet_Tire_Tracks_001_basecolor.jpg" width="0" height="0"></img>
+    <img id="cylinderTexture" src="Metal_Damaged_001_basecolor.jpg" width="0" height="0"></img>
+
+    <script src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript">
+        const {mat2, mat3, mat4, vec2, vec3, vec4, quat} = glMatrix;
+    </script>
+    <script type="module" src="js/main.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+{
+    "camera": {
+        "type": "perspective",
+        "position": [0,0,38],
+        "lookat": [0,-30,0],
+        "up": [0,1,0],
+        "fov": 80
+    },
+    "light":{
+        "name":"light0",
+        "type":"light",
+        "ambient":"#f2f2f2",
+        "directionalLights":[
+            {
+                "name":"directionalLightOne",
+                "type":"directionalLight",
+                "position":[5.0,4.0,0.0],
+                "color":"#999999"
+            }
+            
+        ],
+        "pointLights":[
+            {
+                "name":"pointLightOne",
+                "type":"pointLight",
+                "position":[3,-9,0],
+                "color": "#999999",
+                "attenuationConstant":0.005,
+                "attenuationLinear":0.005,
+                "attenuationQuadratic":0.005
+            },
+            {
+                "name":"pointLightTwo",
+                "type":"pointLight",
+                "position":[0,0,15.0],
+                "color": "#62ff00",
+                "attenuationConstant":0.01,
+                "attenuationLinear":0.01,
+                "attenuationQuadratic":0.01
+            }
+            
+        ]
+               
+    },
+    
+    "root": {
+        "name": "node0",
+        "type": "node",
+        "translation": [0,0,0],
+        "rotation": [0,0,0],
+        "scale": [1,1,1],
+        "children": [
+            
+          
+            {
+                "name": "finalSphere",
+                "type": "object",
+                "obj": "../objects/finalSphere.obj",
+                "color": "#6e9ef0",
+                "translation": [0,0,0],
+                "rotation": [0,0,0],
+                "scale": [7,7,7],
+                "children": []
+            },
+            {
+                "name": "blenderCube",
+                "type": "object",
+                "obj": "../objects/blenderCube.obj",
+                "color": "#999999",
+                "translation": [-10,0,0],
+                "rotation": [0,0,0],
+                "scale": [0.5,0.5,0.5],
+                "children": []
+            },
+            {
+                "name": "blenderCube",
+                "type": "object",
+                "obj": "../objects/blenderCube.obj",
+                "color": "#999999",
+                "translation": [0,0,10],
+                "rotation": [0,0,0],
+                "scale": [0.5,0.5,0.5],
+                "children": []
+            },
+            {
+                "name": "plane",
+                "type": "object",
+                "obj": "../objects/plane.obj",
+                "color": "#999999",
+                "translation": [0,-15,0],
+                "rotation": [0,0,0],
+                "scale": [20,20,20],
+                "children": []
+            },
+            {
+                "name": "cylinder",
+                "type": "object",
+                "obj": "../objects/cylinder.obj",
+                "color": "#999999",
+                "translation": [-10,-9,0],
+                "rotation": [0,0,0],
+                "scale": [2,2,2],
+                "children": []
+            },
+            {
+                "name": "dog_biking",
+                "type": "object",
+                "obj": "../objects/dog_biking.obj",
+                "color": "#999999",
+                "translation": [0,-10,0],
+                "rotation": [0,0,0],
+                "scale": [4,4,4],
+                "children": []
+            },
+            {
+                "name": "blenderCube",
+                "type": "object",
+                "obj": "../objects/blenderCube.obj",
+                "color": "#999999",
+                "translation": [-10,-13,0],
+                "rotation": [0,0,0],
+                "scale": [2,2,2],
+                "children": []
+            },
+            {
+                "name": "blenderCube",
+                "type": "object",
+                "obj": "../objects/blenderCube.obj",
+                "color": "#999999",
+                "translation": [10,-13,0],
+                "rotation": [0,0,0],
+                "scale": [2,2,2],
+                "children": []
+            },{
+                
+                    "name": "cylinder",
+                    "type": "object",
+                    "obj": "../objects/cylinder.obj",
+                    "color": "#999999",
+                    "translation": [10,-9,0],
+                    "rotation": [0,0,0],
+                    "scale": [2,2,2],
+                    "children": []
+                }
+            
+            
+           
+              
+        ]
+    }
+}
